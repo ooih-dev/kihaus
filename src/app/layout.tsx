@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { createMetadata, jsonLd } from "@/lib/seo";
+import { I18nProvider } from "@/lib/i18n";
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -27,7 +28,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} antialiased`}>
-        {children}
+        <I18nProvider>{children}</I18nProvider>
       </body>
     </html>
   );

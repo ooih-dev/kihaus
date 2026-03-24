@@ -2,16 +2,20 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navLinks = [
-  { href: "#services", label: "Leistungen", labelEn: "Services" },
-  { href: "#pricing", label: "Pakete", labelEn: "Packages" },
-  { href: "#how-it-works", label: "So funktioniert's", labelEn: "How It Works" },
-  { href: "#privacy", label: "Datenschutz", labelEn: "Privacy" },
-  { href: "#contact", label: "Kontakt", labelEn: "Contact" },
-];
+import { useTranslations } from "@/lib/i18n";
+import LanguageToggle from "@/components/LanguageToggle";
 
 export default function Header() {
+  const t = useTranslations();
+  const navLinks = [
+    { href: "/#services", label: t.nav.services },
+    { href: "/#pricing", label: t.nav.packages },
+    { href: "/#how-it-works", label: t.nav.howItWorks },
+    { href: "/#privacy", label: t.nav.testimonials },
+    { href: "/blog", label: t.nav.blog },
+    { href: "/#contact", label: t.nav.contact },
+  ];
+
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -31,12 +35,12 @@ export default function Header() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
+        <a href="/" className="flex items-center gap-2 group">
           <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary-600 to-accent-500 flex items-center justify-center text-white font-bold text-sm tracking-tight transition-transform group-hover:scale-105">
-            SK
+            KH
           </div>
           <span className="text-xl font-bold tracking-tight">
-            Spree<span className="gradient-text">KI</span>
+            KI<span className="gradient-text">Hause</span>
           </span>
         </a>
 
@@ -51,11 +55,12 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          <LanguageToggle />
           <a
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-primary-600 to-primary-700 text-white text-sm font-semibold shadow-lg shadow-primary-600/25 hover:shadow-primary-600/40 transition-all hover:-translate-y-0.5"
           >
-            Kostenlos beraten
+            {t.nav.cta}
           </a>
         </div>
 
@@ -95,6 +100,7 @@ export default function Header() {
             className="md:hidden glass border-t border-slate-200"
           >
             <div className="px-4 py-4 flex flex-col gap-3">
+              <LanguageToggle />
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -106,11 +112,11 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 text-center px-5 py-3 rounded-full bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold"
               >
-                Kostenlos beraten
+                {t.nav.cta}
               </a>
             </div>
           </motion.div>
