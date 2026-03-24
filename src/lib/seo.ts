@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://spreeki.de";
-const SITE_NAME = "SpreeKI";
+const SITE_URL = "https://kihause.de";
+const SITE_NAME = "KIHause";
 const DEFAULT_DESCRIPTION =
   "Ihre eigene KI — auf Ihrem Gerät, in Berlin. Keine Cloud. Keine Kompromisse. Premium private AI installation & consulting for Berlin professionals.";
 
@@ -26,14 +26,14 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
       "Mac mini KI einrichten",
       "private AI setup",
       "GDPR compliant AI",
-      "SpreeKI",
+      "KIHause",
       "Datenschutz KI",
       "self-hosted AI Berlin",
       "OpenClaw Berlin",
     ],
-    authors: [{ name: "SpreeKI" }],
-    creator: "SpreeKI",
-    publisher: "SpreeKI",
+    authors: [{ name: "KIHause" }],
+    creator: "KIHause",
+    publisher: "KIHause",
     formatDetection: {
       email: true,
       telephone: true,
@@ -51,7 +51,7 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
           url: `${SITE_URL}/og-image.png`,
           width: 1200,
           height: 630,
-          alt: "SpreeKI — Private AI Concierge Berlin",
+          alt: "KIHause — Private AI Concierge Berlin",
         },
       ],
     },
@@ -74,10 +74,6 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
     },
     alternates: {
       canonical: SITE_URL,
-      languages: {
-        "de-DE": `${SITE_URL}/de`,
-        "en-US": `${SITE_URL}/en`,
-      },
     },
     ...overrides,
   };
@@ -86,11 +82,11 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
 export const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "SpreeKI",
+  name: "KIHause",
   description: DEFAULT_DESCRIPTION,
   url: SITE_URL,
   telephone: "",
-  email: "hallo@spreeki.de",
+  email: "hallo@kihause.de",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Berlin",
