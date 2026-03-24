@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "@/lib/i18n";
 
 export default function Hero() {
+  const t = useTranslations();
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Animated background */}
@@ -33,20 +36,18 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
               <span className="w-2 h-2 rounded-full bg-accent-500 animate-pulse" />
-              100% lokal — 100% DSGVO-konform
+              {t.hero.badge}
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
-              Ihre eigene{" "}
-              <span className="gradient-text">KI</span>
+              {t.hero.title.replace(/\s*\S+$/, " ")}
+              <span className="gradient-text">{t.hero.title.split(" ").pop()}</span>
               <br />
-              <span className="text-slate-400">in Berlin.</span>
+              <span className="text-slate-400">{t.hero.titleCity}</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-600 max-w-lg mb-8 leading-relaxed">
-              Wir installieren Ihre private KI direkt auf Ihrem Gerät. Keine
-              Cloud. Keine Kompromisse. Vollständig DSGVO-konform —{" "}
-              <strong>Ihre Daten verlassen nie Ihr Büro.</strong>
+              {t.hero.description}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -54,7 +55,7 @@ export default function Hero() {
                 href="#contact"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold text-lg shadow-xl shadow-primary-600/25 hover:shadow-primary-600/40 transition-all hover:-translate-y-0.5"
               >
-                Jetzt Beratung anfragen
+                {t.hero.ctaPrimary}
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -63,7 +64,7 @@ export default function Hero() {
                 href="#how-it-works"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-slate-200 text-slate-700 font-semibold text-lg hover:border-primary-300 hover:text-primary-700 transition-all"
               >
-                So funktioniert&apos;s
+                {t.hero.ctaSecondary}
               </a>
             </div>
 
@@ -73,19 +74,19 @@ export default function Hero() {
                 <svg className="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                DSGVO-konform
+                {t.hero.features.dsgvo}
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Vor-Ort in Berlin
+                {t.hero.features.location}
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Keine Abo-Kosten
+                {t.hero.features.noAbo}
               </div>
             </div>
           </motion.div>
@@ -105,12 +106,12 @@ export default function Hero() {
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
                   <div className="w-3 h-3 rounded-full bg-green-400" />
                   <span className="ml-2 text-xs text-slate-400 font-mono">
-                    SpreeKI — Lokale KI
+                    {t.hero.terminal.title}
                   </span>
                 </div>
                 <div className="p-6 font-mono text-sm space-y-3">
                   <div className="text-slate-400">
-                    <span className="text-accent-400">$</span> spreeki status
+                    <span className="text-accent-400">$</span> kihause status
                   </div>
                   <div className="text-slate-300">
                     <span className="text-primary-400">System:</span> Mac mini M4 Pro
@@ -120,19 +121,19 @@ export default function Hero() {
                   </div>
                   <div className="text-slate-300">
                     <span className="text-primary-400">Status:</span>{" "}
-                    <span className="text-accent-400">Aktiv</span>
+                    <span className="text-accent-400">{t.hero.terminal.status}</span>
                   </div>
                   <div className="text-slate-300">
                     <span className="text-primary-400">Datenschutz:</span>{" "}
-                    <span className="text-accent-400">100% lokal</span>
+                    <span className="text-accent-400">{t.hero.terminal.privacy}</span>
                   </div>
                   <div className="text-slate-300">
                     <span className="text-primary-400">Cloud-Verbindung:</span>{" "}
-                    <span className="text-red-400">Keine</span>
+                    <span className="text-red-400">{t.hero.terminal.cloud}</span>
                   </div>
                   <div className="mt-4 pt-3 border-t border-slate-700">
                     <span className="text-slate-400">
-                      <span className="text-accent-400">$</span> Fragen Sie Ihre KI...
+                      <span className="text-accent-400">$</span> {t.hero.terminal.placeholder}
                     </span>
                     <span className="inline-block w-2 h-4 bg-accent-400 ml-1 animate-pulse" />
                   </div>
