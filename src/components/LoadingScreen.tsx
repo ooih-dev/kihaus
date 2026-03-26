@@ -30,28 +30,27 @@ export default function LoadingScreen() {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="fixed inset-0 z-[100] bg-slate-900 flex items-center justify-center overflow-hidden"
         >
-          {/* Animated background gradient */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
-            <motion.div
-              className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl"
-              animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-emerald-500/8 rounded-full blur-3xl"
-              animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.5, 0.2] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            />
-            {/* Subtle grid pattern */}
-            <div
-              className="absolute inset-0 opacity-[0.04]"
+          {/* Full-page YouTube background — scaled up to hide YouTube UI */}
+          <div className="absolute inset-0 overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/W7NrPAAwskk?autoplay=1&loop=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&playlist=W7NrPAAwskk"
+              allow="autoplay"
+              className="absolute pointer-events-none"
               style={{
-                backgroundImage:
-                  "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-                backgroundSize: "60px 60px",
+                border: "none",
+                top: "50%",
+                left: "50%",
+                width: "120vw",
+                height: "120vh",
+                minWidth: "120vw",
+                minHeight: "120vh",
+                transform: "translate(-50%, -50%)",
+                objectFit: "cover",
               }}
+              title="Background"
             />
+            {/* Dark overlay to dim the video */}
+            <div className="absolute inset-0 bg-slate-900/50" />
           </div>
 
           {/* Centered content */}

@@ -45,7 +45,7 @@ export default function Header() {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-5">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -66,7 +66,7 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2"
+          className="lg:hidden p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
         >
@@ -97,7 +97,7 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-slate-200"
+            className="lg:hidden bg-white border-t border-slate-200"
           >
             <div className="px-4 py-4 flex flex-col gap-3">
               <LanguageToggle />

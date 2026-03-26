@@ -20,20 +20,25 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
-          {t.process.steps.map((s, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <div className="w-24 h-24 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl font-bold text-emerald-400">{s.step}</span>
+        <div className="relative">
+          {/* Connecting line behind circles (desktop only) */}
+          <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-slate-700" />
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {t.process.steps.map((s, i) => (
+              <div key={i} className="relative flex flex-col items-center">
+                <div className="relative z-10 w-24 h-24 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-emerald-400">{s.step}</span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 text-center">
+                  {s.title}
+                </h3>
+                <p className="text-slate-400 text-sm text-center leading-relaxed">
+                  {s.desc}
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-white mb-2 text-center">
-                {s.title}
-              </h3>
-              <p className="text-slate-400 text-sm text-center leading-relaxed">
-                {s.desc}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
