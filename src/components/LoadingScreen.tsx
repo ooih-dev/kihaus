@@ -28,7 +28,7 @@ export default function LoadingScreen() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] bg-slate-900 flex items-center justify-center overflow-hidden"
+          className="fixed inset-0 w-screen h-screen z-[100] bg-slate-900 flex items-center justify-center overflow-hidden"
         >
           {/* Full-page YouTube background — scaled up to hide YouTube UI */}
           <div className="absolute inset-0 overflow-hidden">
@@ -40,12 +40,13 @@ export default function LoadingScreen() {
                 border: "none",
                 top: "50%",
                 left: "50%",
-                width: "120vw",
-                height: "120vh",
-                minWidth: "120vw",
-                minHeight: "120vh",
+                width: "300vw",
+                height: "300vh",
+                minWidth: "300vw",
+                minHeight: "300vh",
                 transform: "translate(-50%, -50%)",
                 objectFit: "cover",
+                willChange: "transform",
               }}
               title="Background"
             />

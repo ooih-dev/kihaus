@@ -87,10 +87,10 @@ export default function Pricing() {
 
                 <button
                   onClick={() => setSelectedPackage(key)}
-                  className={`w-full text-center py-2.5 rounded-xl font-semibold transition-all mb-3 text-sm ${
+                  className={`w-full text-center py-3 rounded-xl font-semibold transition-colors mb-3 ${
                     isPopular
-                      ? "bg-white/10 text-white hover:bg-white/20 border border-white/20"
-                      : "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200"
+                      ? "bg-slate-800 text-white border border-slate-700 hover:bg-slate-700"
+                      : "bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-emerald-100"
                   }`}
                 >
                   {t.packages.learnMore}
@@ -98,9 +98,9 @@ export default function Pricing() {
 
                 <a
                   href="/#kontakt"
-                  className={`text-center py-3.5 rounded-xl font-semibold transition-all ${
+                  className={`text-center py-3 rounded-xl font-semibold transition-colors w-full block ${
                     isPopular
-                      ? "bg-white text-slate-900 hover:bg-slate-50"
+                      ? "bg-emerald-500 text-white hover:bg-emerald-600"
                       : "bg-slate-900 text-white hover:bg-slate-800"
                   }`}
                 >
@@ -112,7 +112,7 @@ export default function Pricing() {
         </div>
 
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-slate-100 border border-slate-200">
+          <div className="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <div className="text-left">
               <div className="font-semibold text-slate-900">
                 {t.packages.byod.title}
@@ -121,7 +121,7 @@ export default function Pricing() {
             </div>
             <a
               href="/#kontakt"
-              className="flex-shrink-0 px-5 py-2 rounded-lg bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition"
+              className="flex-shrink-0 bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition"
             >
               {t.packages.byod.cta}
             </a>

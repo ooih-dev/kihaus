@@ -24,10 +24,6 @@ export default function About() {
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
               {t.about.p2}
             </p>
-
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 font-medium text-sm">
-              {t.about.stat}
-            </span>
           </div>
 
           {/* Right column — image */}

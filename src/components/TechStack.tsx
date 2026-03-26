@@ -1,24 +1,24 @@
 "use client";
 
 import { useTranslations } from "@/lib/i18n";
-import { Cpu, Brain, Shield } from "lucide-react";
+import { Laptop, Sparkles, Lock } from "lucide-react";
 
 export default function TechStack() {
   const t = useTranslations();
 
   const cards = [
     {
-      icon: Cpu,
+      icon: Laptop,
       title: t.techStack.hardware.title,
       desc: t.techStack.hardware.desc,
     },
     {
-      icon: Brain,
+      icon: Sparkles,
       title: t.techStack.llms.title,
       desc: t.techStack.llms.desc,
     },
     {
-      icon: Shield,
+      icon: Lock,
       title: t.techStack.network.title,
       desc: t.techStack.network.desc,
     },

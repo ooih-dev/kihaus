@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="de" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="https://deagentur.com/KIHAUSE_LOGO.png" type="image/png" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <script
           type="application/ld+json"

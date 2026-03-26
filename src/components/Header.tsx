@@ -36,11 +36,9 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-600 to-emerald-500 flex items-center justify-center text-white font-bold text-sm tracking-tight transition-transform group-hover:scale-105">
-            KH
-          </div>
+          <img src="https://deagentur.com/KIHAUSE_LOGO.png" alt="KIHause" className="h-8" />
           <span className="text-xl font-bold tracking-tight">
-            KI<span className="gradient-text">Hause</span>
+            <span className="text-emerald-600">KI</span>Hause
           </span>
         </a>
 
