@@ -163,7 +163,7 @@ export default function PackageModal({ packageKey, onClose }: PackageModalProps)
                   {t.packageModal.close}
                 </button>
                 <a
-                  href="#contact"
+                  href="#kontakt"
                   onClick={onClose}
                   className="flex-1 py-3 rounded-xl bg-primary-600 text-white font-semibold text-center hover:bg-primary-700 transition text-sm"
                 >

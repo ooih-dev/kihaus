@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "@/lib/i18n";
+import { ShieldCheck, MapPin, Monitor } from "lucide-react";
 
 export default function Hero() {
   const t = useTranslations();
@@ -35,7 +36,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-              <span className="w-2 h-2 rounded-full bg-accent-500 animate-pulse" />
+              <ShieldCheck className="w-4 h-4" />
               {t.hero.badge}
             </div>
 
@@ -52,8 +53,8 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#contact"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold text-lg shadow-xl shadow-primary-600/25 hover:shadow-primary-600/40 transition-all hover:-translate-y-0.5"
+                href="#kontakt"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 text-white font-semibold text-lg hover:bg-slate-800 transition-all hover:-translate-y-0.5"
               >
                 {t.hero.ctaPrimary}
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,8 +62,8 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="#how-it-works"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-slate-200 text-slate-700 font-semibold text-lg hover:border-primary-300 hover:text-primary-700 transition-all"
+                href="#ablauf"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-lg hover:border-slate-300 transition-all"
               >
                 {t.hero.ctaSecondary}
               </a>
@@ -71,21 +72,15 @@ export default function Hero() {
             {/* Trust badges */}
             <div className="mt-12 flex items-center gap-6 text-sm text-slate-500">
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
+                <ShieldCheck className="w-5 h-5 text-emerald-500" />
                 {t.hero.features.dsgvo}
               </div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
+                <MapPin className="w-5 h-5 text-emerald-500" />
                 {t.hero.features.location}
               </div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
+                <Monitor className="w-5 h-5 text-emerald-500" />
                 {t.hero.features.noAbo}
               </div>
             </div>
@@ -140,18 +135,18 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating badges */}
+              {/* Floating badges — swapped positions */}
               <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 px-4 py-2 rounded-xl bg-white shadow-lg border border-slate-100 text-sm font-medium"
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -bottom-6 -left-6 px-4 py-2 rounded-xl bg-white shadow-lg border border-slate-100 text-sm font-medium"
               >
                 <span className="text-accent-500 mr-1">&#9679;</span> DSGVO Konform
               </motion.div>
               <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 -left-4 px-4 py-2 rounded-xl bg-white shadow-lg border border-slate-100 text-sm font-medium"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -top-6 -right-6 px-4 py-2 rounded-xl bg-white shadow-lg border border-slate-100 text-sm font-medium"
               >
                 <span className="text-primary-500 mr-1">&#9679;</span> Berlin, DE
               </motion.div>

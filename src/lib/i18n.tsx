@@ -171,7 +171,7 @@ const translations = {
         description:
           "Dieses Paket richtet sich an technikaffine Einzelpersonen, die die volle Kontrolle über ihre Daten behalten möchten, ohne auf den Komfort moderner KI zu verzichten.",
         marketingPitch:
-          "Schluss mit dem mulmigen Gefühl bei ChatGPT. Holen Sie sich die Kontrolle über Ihre Daten zurück.",
+          "Schluss mit dem mulmigen Gefühl bei ChatGPT. Holen Sie sich die Kontrolle über Ihre Daten zurück. Schreiben Sie E-Mails, fassen Sie Dokumente zusammen und brainstormen Sie Ideen – mit der absoluten Gewissheit, dass niemand mitliest.",
         idealFor: ["Soloselbstständige", "Berater", "Privatanwender"],
         roi: "Spart ca. 5-8 Stunden pro Woche bei Routineaufgaben.",
         workflow: [
@@ -182,15 +182,15 @@ const translations = {
         features: [
           {
             title: "Hardware-Beratung",
-            desc: "Wir analysieren Ihr Setup und empfehlen exakt die Hardware, die Sie benötigen.",
+            desc: "Wir analysieren Ihr Setup und empfehlen exakt die Hardware, die Sie benötigen (z.B. Mac mini M4). Kein Überverkauf.",
           },
           {
             title: "WhatsApp & Telegram Bot",
-            desc: "Ihre KI ist immer in der Hosentasche dabei.",
+            desc: "Ihre KI ist immer in der Hosentasche dabei. Senden Sie Sprachnachrichten oder Texte sicher über Ihren bevorzugten Messenger.",
           },
           {
             title: "Web-Suche & Kalender",
-            desc: "Die KI kann aktuelle Informationen abrufen und Termine verwalten.",
+            desc: "Die KI kann aktuelle Informationen aus dem Internet abrufen und Termine in Ihrem lokalen Kalender verwalten.",
           },
         ],
         useCasesTitle: "Typische Anwendungsfälle",
@@ -203,9 +203,9 @@ const translations = {
       B: {
         title: "Paket B: Business Brains",
         subtitle: "Für Freelancer, Startups & Agenturen",
-        description: "Machen Sie die KI zu Ihrem produktivsten Mitarbeiter.",
+        description: "Machen Sie die KI zu Ihrem produktivsten Mitarbeiter. Dieses Paket integriert sich nahtlos in Ihre bestehenden Team-Workflows und automatisiert wiederkehrende Aufgaben.",
         marketingPitch:
-          "Skalieren Sie Ihre Agentur oder Ihr Startup, ohne die Personalkosten zu sprengen.",
+          "Skalieren Sie Ihre Agentur oder Ihr Startup, ohne die Personalkosten zu sprengen. Wir verwandeln Ihre lokale Hardware in eine DSGVO-konforme Produktivitätsmaschine, die nahtlos mit Ihrem Team in Slack oder Teams zusammenarbeitet.",
         idealFor: ["Marketing-Agenturen", "Startups", "KMUs", "Consultants"],
         roi: "Automatisiert bis zu 40% der textbasierten Team-Workflows.",
         workflow: [
@@ -216,31 +216,31 @@ const translations = {
         features: [
           {
             title: "Team-Integration (Slack/Teams)",
-            desc: "Die KI wird als Bot in Ihren Firmen-Chat integriert.",
+            desc: "Die KI wird als Bot in Ihren Firmen-Chat integriert. Das gesamte Team kann DSGVO-konform auf das Modell zugreifen.",
           },
           {
             title: "3 Individuelle Workflow-Automatisierungen",
-            desc: "Wir programmieren maßgeschneiderte Skripte für Ihre Prozesse.",
+            desc: "Wir programmieren maßgeschneiderte Skripte für Ihre Prozesse. Beispiele siehe unten.",
           },
           {
             title: "Tailscale Fernzugriff",
-            desc: "Sicherer VPN-Zugriff auf Ihre KI von überall auf der Welt.",
+            desc: "Sicherer VPN-Zugriff auf Ihre KI von überall auf der Welt, ohne offene Ports im Internet.",
           },
         ],
         useCasesTitle: "Beispiele für Workflow-Automatisierungen",
         useCases: [
-          "Wettbewerbsanalyse: Die KI crawlt wöchentlich die Websites Ihrer Konkurrenten.",
-          "Content-Maschine: Sie sprechen ein Voice-Memo ein, die KI erstellt Blogpost, LinkedIn und Newsletter.",
-          "Support-Triage: Eingehende Kunden-E-Mails werden lokal analysiert und kategorisiert.",
+          "Wettbewerbsanalyse: Die KI crawlt wöchentlich die Websites Ihrer Konkurrenten und erstellt ein PDF-Briefing mit allen Änderungen und Neuigkeiten.",
+          "Content-Maschine: Sie sprechen ein 2-minütiges Voice-Memo ein. Die KI erstellt daraus automatisch einen formatierten Blogpost, einen LinkedIn-Beitrag und einen Newsletter-Entwurf.",
+          "Support-Triage: Eingehende Kunden-E-Mails werden lokal analysiert, kategorisiert und mit einem passenden Antwort-Entwurf (basierend auf Ihrer internen Wissensdatenbank) versehen.",
         ],
       },
       C: {
         title: "Paket C: Datenschutz Special",
         subtitle: "Maximale Sicherheit für sensible Berufe",
         description:
-          "Entwickelt für Anwälte, Ärzte, HR-Abteilungen und Journalisten.",
+          "Entwickelt für Anwälte, Ärzte, HR-Abteilungen und Journalisten. Dieses System ist vollständig 'air-gapped' fähig und garantiert absolute Vertraulichkeit.",
         marketingPitch:
-          "Für Berufsgeheimnisträger gibt es keine Kompromisse.",
+          "Für Berufsgeheimnisträger gibt es keine Kompromisse. Dieses System kann physisch vom Internet getrennt werden (Air-Gapped) und erfüllt die höchsten Compliance-Anforderungen für sensible Mandanten- und Patientendaten.",
         idealFor: ["Kanzleien & Notare", "Ärzte & Kliniken", "HR-Abteilungen"],
         roi: "100% Rechtssicherheit & Schutz vor Datenlecks.",
         workflow: [
@@ -251,22 +251,22 @@ const translations = {
         features: [
           {
             title: "100% Offline LLM",
-            desc: "Das System benötigt absolut keine Internetverbindung.",
+            desc: "Das System benötigt absolut keine Internetverbindung, um zu funktionieren. Zero API-Aufrufe nach außen.",
           },
           {
             title: "High-End Hardware Spezifikation",
-            desc: "Mac Studio oder Mac mini mit 64GB+ RAM.",
+            desc: "Konfiguration für Mac Studio oder Mac mini mit 64GB+ RAM, um die intelligentesten lokalen Modelle (z.B. Llama 3 70B) auszuführen.",
           },
           {
             title: "Compliance-Dokumentation",
-            desc: "Schriftliche, anwaltlich geprüfte Dokumentation über die Datenflüsse.",
+            desc: "Sie erhalten eine schriftliche, anwaltlich geprüfte Dokumentation über die Datenflüsse zur Vorlage bei Datenschutzbeauftragten.",
           },
         ],
         useCasesTitle: "Typische Anwendungsfälle",
         useCases: [
-          "Kanzleien: Sicheres Zusammenfassen von Prozessakten und Entwurf von Schriftsätzen.",
-          "Ärzte & Kliniken: Lokale Transkription von Patientengesprächen.",
-          "Personalabteilungen: Automatisierte Auswertung von Bewerbungsunterlagen.",
+          "Kanzleien: Sicheres Zusammenfassen von hunderten Seiten Prozessakten und Entwurf von Schriftsätzen unter Wahrung der anwaltlichen Schweigepflicht.",
+          "Ärzte & Kliniken: Lokale Transkription von Patientengesprächen und automatische Generierung von Arztbriefen (100% DSGVO-konform).",
+          "Personalabteilungen (HR): Automatisierte Auswertung von Bewerbungsunterlagen und internen Mitarbeiterumfragen ohne Preisgabe von Personendaten.",
         ],
       },
     },
@@ -374,35 +374,35 @@ const translations = {
       description: "Erfolgreiche Projekte und zufriedene Teams.",
       items: [
         {
-          text: "Dank dem Berlin Basics Paket haben wir endlich einen sicheren, lokalen Chatbot für unsere sensiblen Mandantendaten.",
+          text: "Dank dem Berlin Basics Paket haben wir endlich einen sicheren, lokalen Chatbot für unsere sensiblen Mandantendaten. Die Einrichtung war in wenigen Tagen erledigt.",
           company: "Name vertraulich",
           size: "Kanzlei, 5-10 Mitarbeiter",
           date: "März 2026",
           package: "Paket A: Berlin Basics",
         },
         {
-          text: "Das Business Brains Paket hat unsere Content-Produktion revolutioniert.",
+          text: "Das Business Brains Paket hat unsere Content-Produktion revolutioniert. Wir automatisieren jetzt ganze Kampagnen-Workflows, ohne dass Daten unsere Server verlassen.",
           company: "Name vertraulich",
           size: "Marketing-Agentur, 10-20 Mitarbeiter",
           date: "Februar 2026",
           package: "Paket B: Business Brains",
         },
         {
-          text: "Mit dem Datenschutz Special verarbeiten wir zehntausende Dokumente lokal.",
+          text: "Mit dem Datenschutz Special verarbeiten wir zehntausende Dokumente lokal. Die Air-Gapped-Fähigkeit ist ein Gamechanger für unser Wissensmanagement.",
           company: "Name vertraulich",
           size: "Industrieunternehmen, 50+ Mitarbeiter",
           date: "Januar 2026",
           package: "Paket C: Datenschutz Special",
         },
         {
-          text: "Unsere Entwickler nutzen den lokalen Copilot täglich. Keine Latenz, absolute Datensicherheit.",
+          text: "Unsere Entwickler nutzen den lokalen Copilot täglich. Keine Latenz, absolute Datensicherheit und perfekt auf unsere Codebase abgestimmt.",
           company: "Name vertraulich",
           size: "Software-Boutique, 15 Mitarbeiter",
           date: "Dezember 2025",
           package: "Paket B: Business Brains",
         },
         {
-          text: "Als Soloselbstständiger spare ich ca. 8 Stunden pro Woche bei Recherche und Texterstellung.",
+          text: "Als Soloselbstständiger spare ich durch den lokalen KI-Assistenten ca. 8 Stunden pro Woche bei der Recherche und Texterstellung.",
           company: "Name vertraulich",
           size: "Unternehmensberatung, 1 Mitarbeiter",
           date: "März 2026",
@@ -414,28 +414,48 @@ const translations = {
       badge: "Aktuelles & Insights",
       title: "Neues aus dem KI-Labor",
       description:
-        "Erfahren Sie mehr über lokale KI, Datenschutz und sichere Technologie.",
+        "Erfahren Sie mehr über lokale KI, Datenschutz und wie Unternehmen in Berlin und Umgebung die Technologie sicher nutzen.",
       readMore: "Weiterlesen",
       posts: [
         {
           category: "Branchen-Insights",
           date: "20. März 2026",
           title: "Warum lokale KI der neue Standard für Kanzleien wird",
-          desc: "Mandantendaten in der Cloud? Für viele Kanzleien ein No-Go.",
+          desc: "Mandantendaten in der Cloud? Für viele Kanzleien ein No-Go. Wir zeigen, wie lokale KI-Modelle die juristische Recherche revolutionieren, ohne das Anwaltsgeheimnis zu gefährden.",
         },
         {
           category: "Datenschutz",
           date: "15. März 2026",
           title: "Datenschutz-Mythen rund um ChatGPT & Co.",
-          desc: '"Die Daten werden doch anonymisiert" – ein gefährlicher Irrtum.',
+          desc: "\"Die Daten werden doch anonymisiert\" – ein gefährlicher Irrtum. Wir klären auf, was wirklich mit Ihren Prompts passiert und wie Sie sich mit lokaler Hardware schützen.",
         },
         {
           category: "Hardware",
           date: "10. März 2026",
           title: "Hardware für KI: Was Sie wirklich im Büro brauchen",
-          desc: "Von Mac Studio bis zu dedizierten Linux-Workstations.",
+          desc: "Von Mac Studio bis zu dedizierten Linux-Workstations. Ein Überblick über die beste Hardware für reibungslose, lokale KI-Modelle in Ihrem Unternehmen.",
         },
       ],
+    },
+    whatsappModal: {
+      title: "WhatsApp Kontakt",
+      subtitle: "Antwort in ca. 4 Stunden",
+      form: {
+        name: "Name",
+        namePlaceholder: "Ihr Name",
+        package: "Gewünschtes Paket",
+        packagePlaceholder: "Bitte auswählen...",
+        message: "Nachricht",
+        messagePlaceholder: "Wie können wir helfen?",
+        submit: "Chat starten",
+        privacy: "Mit Klick auf \"Chat starten\" werden Sie zu WhatsApp weitergeleitet.",
+        options: {
+          A: "Paket A: Berlin Basics",
+          B: "Paket B: Business Brains",
+          C: "Paket C: Datenschutz Special",
+          consultation: "Allgemeine Beratung",
+        },
+      },
     },
     contact: {
       badge: "Kostenloses Erstgespräch",
@@ -653,7 +673,7 @@ const translations = {
         description:
           "This package is aimed at tech-savvy individuals who want to retain full control over their data without sacrificing the convenience of modern AI.",
         marketingPitch:
-          "Stop the uneasy feeling with ChatGPT. Take back control of your data.",
+          "No more uneasy feeling with ChatGPT. Get control over your data back. Write emails, summarize documents, and brainstorm ideas – with the absolute certainty that no one is reading along.",
         idealFor: ["Solo entrepreneurs", "Consultants", "Private users"],
         roi: "Saves approx. 5-8 hours per week on routine tasks.",
         workflow: [
@@ -664,15 +684,15 @@ const translations = {
         features: [
           {
             title: "Hardware Consulting",
-            desc: "We analyze your setup and recommend exactly the hardware you need.",
+            desc: "We analyze your setup and recommend exactly the hardware you need (e.g., Mac mini M4). No overselling.",
           },
           {
             title: "WhatsApp & Telegram Bot",
-            desc: "Your AI is always in your pocket.",
+            desc: "Your AI is always in your pocket. Send voice messages or texts securely via your preferred messenger.",
           },
           {
             title: "Web Search & Calendar",
-            desc: "The AI can retrieve current information and manage appointments.",
+            desc: "The AI can retrieve current information from the internet and manage appointments in your local calendar.",
           },
         ],
         useCasesTitle: "Typical Use Cases",
@@ -685,9 +705,9 @@ const translations = {
       B: {
         title: "Package B: Business Brains",
         subtitle: "For Freelancers, Startups & Agencies",
-        description: "Make AI your most productive employee.",
+        description: "Make AI your most productive employee. This package integrates seamlessly into your existing team workflows and automates recurring tasks.",
         marketingPitch:
-          "Scale your agency or startup without breaking the payroll.",
+          "Scale your agency or startup without breaking personnel costs. We transform your local hardware into a GDPR-compliant productivity machine that works seamlessly with your team in Slack or Teams.",
         idealFor: ["Marketing agencies", "Startups", "SMEs", "Consultants"],
         roi: "Automates up to 40% of text-based team workflows.",
         workflow: [
@@ -698,31 +718,31 @@ const translations = {
         features: [
           {
             title: "Team Integration (Slack/Teams)",
-            desc: "The AI is integrated as a bot into your company chat.",
+            desc: "The AI is integrated as a bot into your company chat. The entire team can access the model in a GDPR-compliant manner.",
           },
           {
             title: "3 Individual Workflow Automations",
-            desc: "We program custom scripts tailored to your processes.",
+            desc: "We program tailored scripts for your processes. See examples below.",
           },
           {
             title: "Tailscale Remote Access",
-            desc: "Secure VPN access to your AI from anywhere in the world.",
+            desc: "Secure VPN access to your AI from anywhere in the world, without open ports on the internet.",
           },
         ],
         useCasesTitle: "Examples of Workflow Automations",
         useCases: [
-          "Competitor analysis: The AI crawls your competitors' websites weekly.",
-          "Content machine: You record a voice memo, the AI creates blog post, LinkedIn and newsletter.",
-          "Support triage: Incoming customer emails are analyzed and categorized locally.",
+          "Competitor Analysis: The AI crawls your competitors' websites weekly and creates a PDF briefing with all changes and news.",
+          "Content Machine: You record a 2-minute voice memo. The AI automatically creates a formatted blog post, a LinkedIn post, and a newsletter draft from it.",
+          "Support Triage: Incoming customer emails are analyzed locally, categorized, and provided with a suitable draft response (based on your internal knowledge base).",
         ],
       },
       C: {
         title: "Package C: Privacy Special",
         subtitle: "Maximum security for sensitive professions",
         description:
-          "Designed for lawyers, doctors, HR departments, and journalists.",
+          "Developed for lawyers, doctors, HR departments, and journalists. This system is fully 'air-gapped' capable and guarantees absolute confidentiality.",
         marketingPitch:
-          "For professionals bound by confidentiality, there are no compromises.",
+          "For those with professional secrecy obligations, there are no compromises. This system can be physically disconnected from the internet (Air-Gapped) and meets the highest compliance requirements for sensitive client and patient data.",
         idealFor: ["Law firms & Notaries", "Doctors & Clinics", "HR departments"],
         roi: "100% legal certainty & protection against data leaks.",
         workflow: [
@@ -733,22 +753,22 @@ const translations = {
         features: [
           {
             title: "100% Offline LLM",
-            desc: "The system requires absolutely no internet connection.",
+            desc: "The system requires absolutely no internet connection to function. Zero API calls to the outside.",
           },
           {
             title: "High-End Hardware Specification",
-            desc: "Mac Studio or Mac mini with 64GB+ RAM.",
+            desc: "Configuration for Mac Studio or Mac mini with 64GB+ RAM to run the most intelligent local models (e.g., Llama 3 70B).",
           },
           {
             title: "Compliance Documentation",
-            desc: "Written, legally reviewed documentation of data flows.",
+            desc: "You receive written, legally reviewed documentation about the data flows for presentation to data protection officers.",
           },
         ],
         useCasesTitle: "Typical Use Cases",
         useCases: [
-          "Law firms: Secure summarization of case files and drafting of pleadings.",
-          "Doctors & Clinics: Local transcription of patient consultations.",
-          "HR departments: Automated evaluation of application documents.",
+          "Law Firms: Securely summarizing hundreds of pages of case files and drafting pleadings while maintaining attorney-client privilege.",
+          "Doctors & Clinics: Local transcription of patient conversations and automatic generation of medical reports (100% GDPR-compliant).",
+          "HR Departments: Automated evaluation of application documents and internal employee surveys without revealing personal data.",
         ],
       },
     },
@@ -855,35 +875,35 @@ const translations = {
       description: "Successful projects and satisfied teams.",
       items: [
         {
-          text: "Thanks to the Berlin Basics package, we finally have a secure, local chatbot for our sensitive client data.",
+          text: "Thanks to the Berlin Basics package, we finally have a secure, local chatbot for our sensitive client data. The setup was completed in a few days.",
           company: "Name confidential",
           size: "Law firm, 5-10 employees",
           date: "March 2026",
           package: "Package A: Berlin Basics",
         },
         {
-          text: "Business Brains has revolutionized our content production.",
+          text: "The Business Brains package has revolutionized our content production. We now automate entire campaign workflows without data leaving our servers.",
           company: "Name confidential",
           size: "Marketing agency, 10-20 employees",
           date: "February 2026",
           package: "Package B: Business Brains",
         },
         {
-          text: "With Privacy Special we process tens of thousands of documents locally.",
+          text: "With the Privacy Special, we process tens of thousands of documents locally. The air-gapped capability is a gamechanger for our knowledge management.",
           company: "Name confidential",
           size: "Industrial company, 50+ employees",
           date: "January 2026",
           package: "Package C: Privacy Special",
         },
         {
-          text: "Our developers use the local Copilot daily. No latency, absolute data security.",
+          text: "Our developers use the local Copilot daily. No latency, absolute data security, and perfectly tailored to our codebase.",
           company: "Name confidential",
           size: "Software boutique, 15 employees",
           date: "December 2025",
           package: "Package B: Business Brains",
         },
         {
-          text: "As a solo entrepreneur I save about 8 hours per week on research and content creation.",
+          text: "As a solo entrepreneur, I save about 8 hours per week on research and text creation thanks to the local AI assistant.",
           company: "Name confidential",
           size: "Management consulting, 1 employee",
           date: "March 2026",
@@ -895,28 +915,48 @@ const translations = {
       badge: "News & Insights",
       title: "News from the AI Lab",
       description:
-        "Learn more about local AI, data privacy, and secure technology.",
+        "Learn more about local AI, data privacy, and how companies in Berlin and the surrounding area use the technology safely.",
       readMore: "Read more",
       posts: [
         {
           category: "Industry Insights",
           date: "March 20, 2026",
           title: "Why local AI is becoming the new standard for law firms",
-          desc: "Client data in the cloud? For many law firms, a no-go.",
+          desc: "Client data in the cloud? A no-go for many law firms. We show how local AI models are revolutionizing legal research without endangering attorney-client privilege.",
         },
         {
           category: "Data Privacy",
           date: "March 15, 2026",
-          title: "Privacy myths about ChatGPT & Co.",
-          desc: '"The data is anonymized anyway" — a dangerous misconception.',
+          title: "Data privacy myths around ChatGPT & Co.",
+          desc: "\"The data is anonymized anyway\" – a dangerous misconception. We clarify what really happens to your prompts and how you can protect yourself with local hardware.",
         },
         {
           category: "Hardware",
           date: "March 10, 2026",
           title: "Hardware for AI: What you really need in the office",
-          desc: "From Mac Studio to dedicated Linux workstations.",
+          desc: "From Mac Studio to dedicated Linux workstations. An overview of the best hardware for smooth, local AI models in your company.",
         },
       ],
+    },
+    whatsappModal: {
+      title: "WhatsApp Contact",
+      subtitle: "Response in approx. 4 hours",
+      form: {
+        name: "Name",
+        namePlaceholder: "Your Name",
+        package: "Desired Package",
+        packagePlaceholder: "Please select...",
+        message: "Message",
+        messagePlaceholder: "How can we help?",
+        submit: "Start Chat",
+        privacy: "By clicking \"Start Chat\" you will be redirected to WhatsApp.",
+        options: {
+          A: "Package A: Berlin Basics",
+          B: "Package B: Business Brains",
+          C: "Package C: Privacy Special",
+          consultation: "General Consultation",
+        },
+      },
     },
     contact: {
       badge: "Free Initial Consultation",

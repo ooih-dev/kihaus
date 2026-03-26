@@ -12,44 +12,33 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary-600 to-accent-500 flex items-center justify-center text-white font-bold text-sm">
-                KH
-              </div>
-              <span className="text-xl font-bold text-white tracking-tight">
-                KIHause
-              </span>
+              <img src="https://deagentur.com/KIHAUSE_LOGO.png" alt="KIHause" className="h-8" />
             </div>
             <p className="text-sm leading-relaxed max-w-sm mb-4">
               {t.footer.description}
             </p>
             <p className="text-sm">
-              <a href="mailto:hallo@kihause.de" className="text-primary-400 hover:text-primary-300 transition">
+              <a href="mailto:hallo@kihause.de" className="text-emerald-400 hover:text-emerald-300 transition">
                 hallo@kihause.de
               </a>
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* Solutions */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Navigation</h4>
+            <h4 className="text-white font-semibold mb-4">{t.footer.solutions}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/#services" className="hover:text-white transition">{t.nav.services}</a></li>
-              <li><a href="/#pricing" className="hover:text-white transition">{t.nav.packages}</a></li>
-              <li><a href="/#how-it-works" className="hover:text-white transition">{t.nav.howItWorks}</a></li>
-              <li><a href="/#privacy" className="hover:text-white transition">{t.nav.process}</a></li>
-              <li><a href="/#contact" className="hover:text-white transition">{t.nav.contact}</a></li>
+              <li><a href="/#leistungen" className="hover:text-white transition">{t.nav.services}</a></li>
+              <li><a href="/#pakete" className="hover:text-white transition">{t.nav.packages}</a></li>
+              <li><a href="/#ablauf" className="hover:text-white transition">{t.nav.howItWorks}</a></li>
+              <li><a href="/#datenschutz" className="hover:text-white transition">{t.nav.process}</a></li>
+              <li><a href="/#kontakt" className="hover:text-white transition">{t.nav.contact}</a></li>
             </ul>
           </div>
 
-          {/* Blog + Legal */}
+          {/* Legal */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Blog</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="/blog/warum-ki-in-berlin-selbst-hosten" className="hover:text-white transition">{t.footer.hosting}</a></li>
-              <li><a href="/blog/ki-fuer-anwaelte-und-aerzte" className="hover:text-white transition">{t.footer.specialists}</a></li>
-              <li><a href="/blog/mac-mini-private-ki-zentrale" className="hover:text-white transition">{t.footer.macmini}</a></li>
-            </ul>
-            <h4 className="text-white font-semibold mt-6 mb-4">{t.footer.legal}</h4>
+            <h4 className="text-white font-semibold mb-4">{t.footer.legal}</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="/impressum" className="hover:text-white transition">{t.footer.imprint}</a></li>
               <li><a href="/datenschutz" className="hover:text-white transition">{t.footer.privacy}</a></li>

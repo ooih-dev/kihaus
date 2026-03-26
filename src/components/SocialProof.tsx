@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "@/lib/i18n";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, X } from "lucide-react";
+import { ShieldCheck, X } from "lucide-react";
 
 const NAMES = [
   "Jessica", "Markus", "Sarah", "Thomas", "Elena", "David",
@@ -77,7 +77,7 @@ export default function SocialProof() {
           <div className="bg-white rounded-2xl shadow-2xl p-4 border border-slate-100 flex items-center gap-4 max-w-sm">
             {/* Left icon */}
             <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
-              <ShoppingBag className="w-5 h-5" />
+              <ShieldCheck className="w-5 h-5" />
             </div>
 
             {/* Middle content */}

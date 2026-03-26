@@ -6,7 +6,7 @@ export default function Privacy() {
   const t = useTranslations();
 
   return (
-    <section id="privacy" className="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <section id="datenschutz" className="py-24 bg-slate-900 text-white relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl" />
@@ -14,7 +14,7 @@ export default function Privacy() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-primary-300 text-sm font-medium mb-4">
+          <div className="text-sm font-bold tracking-widest text-emerald-400 uppercase mb-4">
             {t.comparison.badge}
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
