@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://spreeki.de/sitemap.xml",
+    sitemap: "https://kihause.de/sitemap.xml",
   };
 }

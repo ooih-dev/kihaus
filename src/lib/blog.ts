@@ -1,0 +1,54 @@
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  readingTime: string;
+  category: string;
+  tags: string[];
+  targetPackage: "a" | "b" | "c" | "d";
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "warum-ki-in-berlin-selbst-hosten",
+    title: "Warum ich meine KI in Berlin selbst hoste",
+    description:
+      "Jeden Tag schicken Berliner Professionals ihre vertraulichen Daten an Server in den USA. Warum ich aufgehört habe — und wie Sie das auch können.",
+    date: "2026-03-15",
+    readingTime: "6 Min.",
+    category: "Datenschutz",
+    tags: ["private KI Berlin", "KI selbst hosten", "lokale KI", "Datenschutz KI", "DSGVO"],
+    targetPackage: "b",
+  },
+  {
+    slug: "ki-fuer-anwaelte-und-aerzte",
+    title: "KI für Anwälte und Ärzte — ohne Cloud",
+    description:
+      "ChatGPT in der Kanzlei? Das kann gegen § 203 StGB verstoßen. So nutzen Berliner Anwälte und Ärzte KI — vollständig lokal und rechtskonform.",
+    date: "2026-03-12",
+    readingTime: "7 Min.",
+    category: "Branche",
+    tags: ["KI für Anwälte", "KI für Ärzte", "Berufsgeheimnis", "§ 203 StGB", "DSGVO KI Arzt"],
+    targetPackage: "c",
+  },
+  {
+    slug: "mac-mini-private-ki-zentrale",
+    title: "Mac mini als private KI-Zentrale einrichten",
+    description:
+      "Der M4 Pro Mac mini ist die perfekte Hardware für Ihre lokale KI. Welche Specs Sie brauchen, was die Installation umfasst — und wo die meisten scheitern.",
+    date: "2026-03-08",
+    readingTime: "8 Min.",
+    category: "Anleitung",
+    tags: ["Mac mini KI", "Ollama Mac mini", "lokale KI Mac", "private KI Zentrale", "KI einrichten"],
+    targetPackage: "a",
+  },
+];
+
+export function getPostBySlug(slug: string): BlogPost | undefined {
+  return blogPosts.find((p) => p.slug === slug);
+}
+
+export function getRelatedPosts(currentSlug: string): BlogPost[] {
+  return blogPosts.filter((p) => p.slug !== currentSlug);
+}

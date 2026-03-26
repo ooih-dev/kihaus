@@ -29,7 +29,11 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
       "KIHause",
       "Datenschutz KI",
       "self-hosted AI Berlin",
-      "OpenClaw Berlin",
+      "KI für Anwälte",
+      "KI für Ärzte",
+      "lokale KI Berlin",
+      "private AI Berlin",
+      "KI ohne Cloud",
     ],
     authors: [{ name: "KIHause" }],
     creator: "KIHause",
@@ -48,7 +52,7 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
       description,
       images: [
         {
-          url: `${SITE_URL}/og-image.png`,
+          url: `${SITE_URL}/og.png`,
           width: 1200,
           height: 630,
           alt: "KIHause — Private AI Concierge Berlin",
@@ -59,7 +63,7 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}/og-image.png`],
+      images: [`${SITE_URL}/og.png`],
     },
     robots: {
       index: true,
@@ -85,7 +89,7 @@ export const jsonLd = {
   name: "KIHause",
   description: DEFAULT_DESCRIPTION,
   url: SITE_URL,
-  telephone: "",
+  telephone: "+491776525804",
   email: "hallo@kihause.de",
   address: {
     "@type": "PostalAddress",
