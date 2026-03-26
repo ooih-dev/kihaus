@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <img src="https://deagentur.com/KIHAUSE_LOGO.png" alt="KIHause" className="h-8" />
+              <img src="/kihause-logo.png" alt="KIHause" className="h-8" />
             </div>
             <p className="text-sm leading-relaxed max-w-sm mb-4">
               {t.footer.description}

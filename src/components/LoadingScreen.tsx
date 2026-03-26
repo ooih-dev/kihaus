@@ -58,7 +58,7 @@ export default function LoadingScreen() {
           <div className="relative z-10 flex flex-col items-center text-center px-6">
             {/* Logo */}
             <motion.img
-              src="https://deagentur.com/KIHAUSE_LOGO.png"
+              src="/kihause-logo.png"
               alt="KIHause"
               className="h-20 mb-8"
               initial={{ opacity: 0, y: 20 }}

@@ -36,7 +36,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 group">
-          <img src="https://deagentur.com/KIHAUSE_LOGO.png" alt="KIHause" className="h-8" />
+          <img src="/kihause-logo.png" alt="KIHause" className="h-8" />
           <span className="text-xl font-bold tracking-tight">
             <span className="text-emerald-600">KI</span>Hause
           </span>
