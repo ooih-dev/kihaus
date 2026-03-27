@@ -11,6 +11,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "chatgpt-datenschutz-risiko-kanzlei",
+    title: "Warum ChatGPT für Ihre Kanzlei ein Datenschutz-Risiko ist",
+    description: "Jede Eingabe in ChatGPT verlässt Ihr Büro. Mandantennamen, Aktenzeichen, vertrauliche Sachverhalte — alles landet auf US-Servern. Warum das für Kanzleien problematisch ist.",
+    date: "2026-03-27",
+    readingTime: "5 Min.",
+    category: "Datenschutz",
+    tags: ["ChatGPT Kanzlei", "DSGVO Anwalt", "KI Datenschutz", "anwaltliche Schweigepflicht", "lokale KI Kanzlei"],
+    targetPackage: "c",
+  },
+  {
+    slug: "was-ist-lokales-ki-modell",
+    title: "Was ist ein lokales KI-Modell? Einfach erklärt",
+    description: "KI-Systeme können direkt auf einem Gerät in Ihrem Büro laufen — ganz ohne Internet und Cloud. Was das bedeutet und warum es für Unternehmen die bessere Wahl ist.",
+    date: "2026-03-27",
+    readingTime: "4 Min.",
+    category: "Grundlagen",
+    tags: ["lokales KI-Modell", "KI ohne Cloud", "KI erklärt", "private KI", "DSGVO KI"],
+    targetPackage: "a",
+  },
+  {
     slug: "warum-ki-in-berlin-selbst-hosten",
     title: "Warum ich meine KI in Berlin selbst hoste",
     description:

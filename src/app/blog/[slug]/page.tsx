@@ -10,11 +10,15 @@ import { createMetadata } from "@/lib/seo";
 import PostSelbstHosten from "@/components/blog/PostSelbstHosten";
 import PostAnwaelteAerzte from "@/components/blog/PostAnwaelteAerzte";
 import PostMacMiniSetup from "@/components/blog/PostMacMiniSetup";
+import PostChatGPTKanzlei from "@/components/blog/PostChatGPTKanzlei";
+import PostLokalesKIModell from "@/components/blog/PostLokalesKIModell";
 
 const postComponents: Record<string, React.ComponentType> = {
   "warum-ki-in-berlin-selbst-hosten": PostSelbstHosten,
   "ki-fuer-anwaelte-und-aerzte": PostAnwaelteAerzte,
   "mac-mini-private-ki-zentrale": PostMacMiniSetup,
+  "chatgpt-datenschutz-risiko-kanzlei": PostChatGPTKanzlei,
+  "was-ist-lokales-ki-modell": PostLokalesKIModell,
 };
 
 export function generateStaticParams() {

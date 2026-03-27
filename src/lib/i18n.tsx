@@ -418,6 +418,18 @@ const translations = {
       readMore: "Weiterlesen",
       posts: [
         {
+          category: "Datenschutz",
+          date: "27. März 2026",
+          title: "Warum ChatGPT für Ihre Kanzlei ein Datenschutz-Risiko ist",
+          desc: "Mandantendaten in der Cloud? Jede Eingabe in ChatGPT verlässt Ihr Büro. Warum das für Kanzleien berufsrechtlich problematisch ist.",
+        },
+        {
+          category: "Grundlagen",
+          date: "27. März 2026",
+          title: "Was ist ein lokales KI-Modell? Einfach erklärt",
+          desc: "KI-Systeme können direkt auf einem Gerät in Ihrem Büro laufen — ganz ohne Internet. Was das bedeutet und warum es die bessere Wahl ist.",
+        },
+        {
           category: "Branchen-Insights",
           date: "20. März 2026",
           title: "Warum lokale KI der neue Standard für Kanzleien wird",
@@ -918,6 +930,18 @@ const translations = {
         "Learn more about local AI, data privacy, and how companies in Berlin and the surrounding area use the technology safely.",
       readMore: "Read more",
       posts: [
+        {
+          category: "Data Privacy",
+          date: "March 27, 2026",
+          title: "Why ChatGPT is a data privacy risk for your law firm",
+          desc: "Client data in the cloud? Every input to ChatGPT leaves your office. Why this is legally problematic for law firms.",
+        },
+        {
+          category: "Basics",
+          date: "March 27, 2026",
+          title: "What is a local AI model? Simply explained",
+          desc: "AI systems can run directly on a device in your office — without internet. What that means and why it's the better choice.",
+        },
         {
           category: "Industry Insights",
           date: "March 20, 2026",
