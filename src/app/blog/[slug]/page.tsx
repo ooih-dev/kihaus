@@ -37,6 +37,7 @@ export async function generateMetadata({
   return createMetadata({
     title: post.title,
     description: post.description,
+    path: `/blog/${slug}`,
     openGraph: {
       type: "article",
       title: post.title,
@@ -73,6 +74,7 @@ export default async function BlogPostPage({
     headline: post.title,
     description: post.description,
     datePublished: post.date,
+    dateModified: post.date,
     author: { "@type": "Organization", name: "KIHause" },
     publisher: { "@type": "Organization", name: "KIHause" },
     mainEntityOfPage: `https://kihause.de/blog/${slug}`,

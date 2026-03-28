@@ -8,6 +8,7 @@ export const metadata: Metadata = createMetadata({
   title: "Blog — Private KI in Berlin",
   description:
     "Praxiswissen rund um lokale KI, Datenschutz und private AI-Installation in Berlin. Tipps für Professionals, Anwälte und Ärzte.",
+  path: "/blog",
 });
 
 const blogJsonLd = {

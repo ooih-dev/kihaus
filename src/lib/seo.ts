@@ -5,13 +5,17 @@ const SITE_NAME = "KIHause";
 const DEFAULT_DESCRIPTION =
   "Ihre eigene KI — auf Ihrem Gerät, in Berlin. Keine Cloud. Keine Kompromisse. Premium private AI installation & consulting for Berlin professionals.";
 
-export function createMetadata(overrides?: Partial<Metadata>): Metadata {
-  const title = overrides?.title
-    ? `${overrides.title} | ${SITE_NAME}`
+export function createMetadata(overrides?: Partial<Metadata> & { path?: string }): Metadata {
+  const { path, ...rest } = overrides || {};
+
+  const title = rest?.title
+    ? `${rest.title} | ${SITE_NAME}`
     : `${SITE_NAME} — Private AI Concierge Berlin`;
 
   const description =
-    (overrides?.description as string) || DEFAULT_DESCRIPTION;
+    (rest?.description as string) || DEFAULT_DESCRIPTION;
+
+  const canonicalUrl = path ? `${SITE_URL}${path}` : SITE_URL;
 
   return {
     title,
@@ -46,7 +50,7 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
       type: "website",
       locale: "de_DE",
       alternateLocale: "en_US",
-      url: SITE_URL,
+      url: canonicalUrl,
       siteName: SITE_NAME,
       title,
       description,
@@ -77,9 +81,9 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
       },
     },
     alternates: {
-      canonical: SITE_URL,
+      canonical: canonicalUrl,
     },
-    ...overrides,
+    ...rest,
   };
 }
 
