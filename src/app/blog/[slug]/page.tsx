@@ -12,6 +12,8 @@ import PostAnwaelteAerzte from "@/components/blog/PostAnwaelteAerzte";
 import PostMacMiniSetup from "@/components/blog/PostMacMiniSetup";
 import PostChatGPTKanzlei from "@/components/blog/PostChatGPTKanzlei";
 import PostLokalesKIModell from "@/components/blog/PostLokalesKIModell";
+import PostArztpraxisDSGVO from "@/components/blog/PostArztpraxisDSGVO";
+import PostAgenturKIohneDatenleck from "@/components/blog/PostAgenturKIohneDatenleck";
 
 const postComponents: Record<string, React.ComponentType> = {
   "warum-ki-in-berlin-selbst-hosten": PostSelbstHosten,
@@ -19,6 +21,8 @@ const postComponents: Record<string, React.ComponentType> = {
   "mac-mini-private-ki-zentrale": PostMacMiniSetup,
   "chatgpt-datenschutz-risiko-kanzlei": PostChatGPTKanzlei,
   "was-ist-lokales-ki-modell": PostLokalesKIModell,
+  "dsgvo-ki-arztpraxis": PostArztpraxisDSGVO,
+  "ki-agentur-ohne-datenleck": PostAgenturKIohneDatenleck,
 };
 
 export function generateStaticParams() {

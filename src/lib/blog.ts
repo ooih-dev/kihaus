@@ -63,6 +63,28 @@ export const blogPosts: BlogPost[] = [
     tags: ["Mac mini KI", "Ollama Mac mini", "lokale KI Mac", "private KI Zentrale", "KI einrichten"],
     targetPackage: "a",
   },
+  {
+    slug: "dsgvo-ki-arztpraxis",
+    title: "DSGVO-konforme KI für Arztpraxen: Patientendaten sicher verwalten",
+    description:
+      "Patientendaten in ChatGPT eingeben? Das ist ein schwerwiegender Datenschutzverstoß. Wie Arztpraxen KI nutzen können — vollständig lokal, ohne Cloud und ohne DSGVO-Risiko.",
+    date: "2026-03-28",
+    readingTime: "6 Min.",
+    category: "Branche",
+    tags: ["KI Arztpraxis", "DSGVO Gesundheitsdaten", "lokale KI Arzt", "Patientendaten Datenschutz", "KI Praxis DSGVO"],
+    targetPackage: "c",
+  },
+  {
+    slug: "ki-agentur-ohne-datenleck",
+    title: "KI in der Agentur: Kreativ arbeiten ohne Datenleck",
+    description:
+      "Agenturen nutzen KI täglich — und geben dabei Kundendaten, NDAs und unveröffentlichte Kampagnen an Cloud-Server weiter. Wie Sie KI nutzen und Ihre Kunden schützen.",
+    date: "2026-03-28",
+    readingTime: "5 Min.",
+    category: "Branche",
+    tags: ["KI Agentur", "DSGVO Agentur", "lokale KI Marketing", "Kundendaten Schutz", "private KI Agentur"],
+    targetPackage: "b",
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
