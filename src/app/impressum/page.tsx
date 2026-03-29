@@ -26,8 +26,9 @@ export default function Impressum() {
               </h2>
               <p className="text-slate-600 leading-relaxed">
                 KIHause<br />
-                Inhaber: Emad Almashhadani<br />
-                Berlin, Deutschland
+                Inhaber: Maxim Boichenko<br />
+                Otto-Suhr-Allee 73<br />
+                10585 Berlin, Deutschland
               </p>
             </section>
 
@@ -38,10 +39,10 @@ export default function Impressum() {
               <p className="text-slate-600 leading-relaxed">
                 E-Mail:{" "}
                 <a
-                  href="mailto:hallo@kihause.de"
+                  href="mailto:mm.boichenko@gmail.com"
                   className="text-emerald-600 hover:text-emerald-500"
                 >
-                  hallo@kihause.de
+                  mm.boichenko@gmail.com
                 </a>
                 <br />
                 Telefon:{" "}
@@ -69,8 +70,9 @@ export default function Impressum() {
                 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
               </h2>
               <p className="text-slate-600 leading-relaxed">
-                Emad Almashhadani<br />
-                Berlin, Deutschland
+                Maxim Boichenko<br />
+                Otto-Suhr-Allee 73<br />
+                10585 Berlin, Deutschland
               </p>
             </section>
 

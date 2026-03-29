@@ -28,14 +28,15 @@ export default function Datenschutz() {
               </h2>
               <p className="text-slate-600 leading-relaxed">
                 KIHause<br />
-                Inhaber: Emad Almashhadani<br />
-                Berlin, Deutschland<br />
+                Inhaber: Maxim Boichenko<br />
+                Otto-Suhr-Allee 73<br />
+                10585 Berlin, Deutschland<br />
                 E-Mail:{" "}
                 <a
-                  href="mailto:hallo@kihause.de"
+                  href="mailto:mm.boichenko@gmail.com"
                   className="text-emerald-600 hover:text-emerald-500"
                 >
-                  hallo@kihause.de
+                  mm.boichenko@gmail.com
                 </a>
                 <br />
                 Telefon: +49 177 6525804
