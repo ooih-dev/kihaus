@@ -42,6 +42,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="/impressum" className="hover:text-white transition">{t.footer.imprint}</a></li>
               <li><a href="/datenschutz" className="hover:text-white transition">{t.footer.privacy}</a></li>
+              <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
             </ul>
           </div>
         </div>
