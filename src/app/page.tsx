@@ -13,12 +13,10 @@ import SocialProof from "@/components/SocialProof";
 import Footer from "@/components/Footer";
 import BlogPreview from "@/components/BlogPreview";
 import WhatsAppFab from "@/components/WhatsAppFab";
-import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
   return (
     <>
-      <LoadingScreen />
       <Header />
       <main>
         <Hero />
