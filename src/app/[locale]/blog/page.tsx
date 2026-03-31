@@ -23,6 +23,7 @@ export async function generateMetadata({
       languages: {
         de: "https://kihause.de/de/blog",
         en: "https://kihause.de/en/blog",
+        "x-default": "https://kihause.de/de/blog",
       },
     },
   });

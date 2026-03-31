@@ -49,6 +49,23 @@ export async function generateMetadata({
 
   const otherLocale = locale === "de" ? "en" : "de";
 
+  // Check if this slug exists in the other locale (true translation pair)
+  const otherPost = await getPostBySlug(slug, otherLocale);
+
+  const languages: Record<string, string> = {
+    [locale]: `https://kihause.de/${locale}/blog/${slug}`,
+  };
+
+  // Only add the other locale if the same slug actually exists there
+  if (otherPost) {
+    languages[otherLocale] = `https://kihause.de/${otherLocale}/blog/${slug}`;
+  }
+
+  // x-default points to German version if it exists, otherwise current locale
+  languages["x-default"] = locale === "de" || !otherPost
+    ? `https://kihause.de/${locale}/blog/${slug}`
+    : `https://kihause.de/de/blog/${slug}`;
+
   return createMetadata({
     title: post.title,
     description: post.description,
@@ -63,10 +80,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://kihause.de/${locale}/blog/${slug}`,
-      languages: {
-        [locale]: `https://kihause.de/${locale}/blog/${slug}`,
-        [otherLocale]: `https://kihause.de/${otherLocale}/blog`,
-      },
+      languages,
     },
   });
 }

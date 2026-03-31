@@ -6,9 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: [
-      "https://kihause.de/sitemap.xml",
-      "https://kihause.de/sitemap-index.xml",
-    ],
+    sitemap: "https://kihause.de/sitemap.xml",
   };
 }
