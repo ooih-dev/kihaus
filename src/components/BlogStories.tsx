@@ -65,17 +65,19 @@ export default function BlogStories({ open, onClose, locale }: BlogStoriesProps)
   }, [open, go, onClose]);
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
-    const threshold = 50;
-    if (info.offset.x < -threshold) go(1);
-    else if (info.offset.x > threshold) go(-1);
+    const threshold = 30;
+    const velocity = info.velocity.x;
+    // Respond to both distance AND velocity for snappier feel
+    if (info.offset.x < -threshold || velocity < -300) go(1);
+    else if (info.offset.x > threshold || velocity > 300) go(-1);
   };
 
   const post = posts[current];
 
   const slideVariants = {
-    enter: (d: number) => ({ x: d > 0 ? 300 : -300, opacity: 0 }),
-    center: { x: 0, opacity: 1 },
-    exit: (d: number) => ({ x: d > 0 ? -300 : 300, opacity: 0 }),
+    enter: (d: number) => ({ x: d > 0 ? 120 : -120, opacity: 0, scale: 0.97 }),
+    center: { x: 0, opacity: 1, scale: 1 },
+    exit: (d: number) => ({ x: d > 0 ? -120 : 120, opacity: 0, scale: 0.97 }),
   };
 
   return (
@@ -85,8 +87,9 @@ export default function BlogStories({ open, onClose, locale }: BlogStoriesProps)
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
           className="fixed inset-0 z-[100] bg-slate-950 flex flex-col"
+          style={{ willChange: "opacity" }}
           ref={containerRef}
         >
           {/* Top bar */}
@@ -111,7 +114,7 @@ export default function BlogStories({ open, onClose, locale }: BlogStoriesProps)
               {posts.map((_, i) => (
                 <div key={i} className="flex-1 h-0.5 rounded-full bg-white/20 overflow-hidden">
                   <div
-                    className="h-full rounded-full bg-emerald-400 transition-all duration-300"
+                    className="h-full rounded-full bg-emerald-400 transition-all duration-200 ease-out"
                     style={{ width: i < current ? "100%" : i === current ? "100%" : "0%" }}
                   />
                 </div>
@@ -130,7 +133,7 @@ export default function BlogStories({ open, onClose, locale }: BlogStoriesProps)
                 {locale === "en" ? "No posts yet" : "Noch keine Artikel"}
               </div>
             ) : (
-              <AnimatePresence custom={direction} mode="wait">
+              <AnimatePresence custom={direction} mode="popLayout">
                 <motion.div
                   key={current}
                   custom={direction}
@@ -138,12 +141,13 @@ export default function BlogStories({ open, onClose, locale }: BlogStoriesProps)
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  transition={{ type: "tween", duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
                   drag="x"
                   dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.15}
+                  dragElastic={0.3}
                   onDragEnd={handleDragEnd}
                   className="absolute inset-0 flex flex-col justify-center px-8 cursor-grab active:cursor-grabbing select-none"
+                  style={{ willChange: "transform, opacity", touchAction: "pan-y" }}
                 >
                   {/* Category + meta */}
                   <div className="flex items-center gap-3 mb-6">
@@ -205,7 +209,7 @@ export default function BlogStories({ open, onClose, locale }: BlogStoriesProps)
                   <button
                     key={i}
                     onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    className={`w-2 h-2 rounded-full transition-all duration-200 ease-out ${
                       i === current ? "bg-emerald-400 w-6" : "bg-white/20 hover:bg-white/40"
                     }`}
                   />
