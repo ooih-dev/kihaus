@@ -4,6 +4,9 @@ import Footer from "@/components/Footer";
 import { getAllPosts } from "@/lib/blog";
 import { createMetadata } from "@/lib/seo";
 
+// ISR: revalidate every 60s so new posts appear on the listing without redeploy
+export const revalidate = 60;
+
 export async function generateMetadata({
   params,
 }: {

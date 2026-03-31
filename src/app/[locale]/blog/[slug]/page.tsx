@@ -15,6 +15,12 @@ import PostLokalesKIModell from "@/components/blog/PostLokalesKIModell";
 import PostAnthropicIPO from "@/components/blog/PostAnthropicIPO";
 import PostAnthropicIPODe from "@/components/blog/PostAnthropicIPODe";
 
+// ISR: revalidate every 60s so new posts appear without redeploy
+export const revalidate = 60;
+
+// Allow pages not returned by generateStaticParams to be rendered on-demand
+export const dynamicParams = true;
+
 const postComponents: Record<string, React.ComponentType> = {
   "anthropic-ipo-analyse-2026": PostAnthropicIPODe,
   "anthropic-ipo-analysis-2026": PostAnthropicIPO,
