@@ -11,6 +11,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "anthropic-ipo-analysis-2026",
+    title: "Anthropic IPO: The $380B AI Giant Goes Public — Will It Moon or Melt?",
+    description: "An analytical deep-dive into what could be the biggest tech IPO of 2026. Revenue charts, scenario analysis, historical comparisons, and what smart money is watching.",
+    date: "2026-03-31",
+    readingTime: "10 Min.",
+    category: "Analysis",
+    tags: ["Anthropic IPO", "Claude AI IPO", "AI stock 2026", "Anthropic valuation", "tech IPO analysis", "AI investment", "OpenAI vs Anthropic"],
+    targetPackage: "b",
+  },
+  {
     slug: "chatgpt-datenschutz-risiko-kanzlei",
     title: "Warum ChatGPT für Ihre Kanzlei ein Datenschutz-Risiko ist",
     description: "Jede Eingabe in ChatGPT verlässt Ihr Büro. Mandantennamen, Aktenzeichen, vertrauliche Sachverhalte — alles landet auf US-Servern. Warum das für Kanzleien problematisch ist.",
