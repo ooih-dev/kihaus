@@ -2,18 +2,20 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations } from "@/lib/i18n";
+import { useTranslations, useLanguage } from "@/lib/i18n";
 import LanguageToggle from "@/components/LanguageToggle";
 
 export default function Header() {
   const t = useTranslations();
+  const { locale } = useLanguage();
+  const prefix = `/${locale}`;
   const navLinks = [
-    { href: "/#leistungen", label: t.nav.services },
-    { href: "/#pakete", label: t.nav.packages },
-    { href: "/#ablauf", label: t.nav.howItWorks },
-    { href: "/#erfahrungen", label: t.nav.testimonials },
-    { href: "/blog", label: t.nav.blog },
-    { href: "/#kontakt", label: t.nav.contact },
+    { href: `${prefix}/#leistungen`, label: t.nav.services },
+    { href: `${prefix}/#pakete`, label: t.nav.packages },
+    { href: `${prefix}/#ablauf`, label: t.nav.howItWorks },
+    { href: `${prefix}/#erfahrungen`, label: t.nav.testimonials },
+    { href: `${prefix}/blog`, label: t.nav.blog },
+    { href: `${prefix}/#kontakt`, label: t.nav.contact },
   ];
 
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +37,7 @@ export default function Header() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 group">
+        <a href={prefix} className="flex items-center gap-2 group">
           <img src="/kihause-logo.png" alt="KIHause" className="h-8" />
           <span className="text-xl font-bold tracking-tight">
             <span className="text-emerald-600">KI</span>Hause
@@ -55,7 +57,7 @@ export default function Header() {
           ))}
           <LanguageToggle />
           <a
-            href="/#kontakt"
+            href={`${prefix}/#kontakt`}
             className="inline-flex items-center px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition-all hover:-translate-y-0.5"
           >
             {t.nav.cta}
@@ -110,7 +112,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="/#kontakt"
+                href={`${prefix}/#kontakt`}
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 text-center px-5 py-3 rounded-full bg-slate-900 text-white font-semibold"
               >

@@ -31,7 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} antialiased`}>
-        <I18nProvider>{children}</I18nProvider>
+        {children}
       </body>
     </html>
   );

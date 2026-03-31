@@ -1051,25 +1051,30 @@ const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 interface I18nProviderProps {
   children: ReactNode;
+  defaultLocale?: Locale;
 }
 
-export function I18nProvider({ children }: I18nProviderProps) {
-  const [locale, setLocaleState] = useState<Locale>("de");
+export function I18nProvider({ children, defaultLocale = "de" }: I18nProviderProps) {
+  const [locale, setLocaleState] = useState<Locale>(defaultLocale);
 
   useEffect(() => {
-    const stored = localStorage.getItem("kihause-lang") as Locale | null;
-    if (stored === "de" || stored === "en") {
-      setLocaleState(stored);
-      document.documentElement.lang = stored;
-    } else {
-      document.documentElement.lang = "de";
-    }
-  }, []);
+    // Sync from URL locale prop
+    setLocaleState(defaultLocale);
+    document.documentElement.lang = defaultLocale;
+  }, [defaultLocale]);
 
   const setLocale = (newLocale: Locale) => {
-    setLocaleState(newLocale);
-    localStorage.setItem("kihause-lang", newLocale);
-    document.documentElement.lang = newLocale;
+    // Navigate to the new locale URL instead of just toggling state
+    if (typeof window !== "undefined") {
+      const path = window.location.pathname;
+      const currentLocale = path.split("/")[1];
+      if (currentLocale === "de" || currentLocale === "en") {
+        const newPath = path.replace(`/${currentLocale}`, `/${newLocale}`);
+        window.location.href = newPath;
+      } else {
+        window.location.href = `/${newLocale}${path}`;
+      }
+    }
   };
 
   const t = translations[locale] as Translations;
