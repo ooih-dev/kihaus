@@ -21,9 +21,10 @@ export default function RootLayout({
     <html lang="de" className="scroll-smooth">
       <head>
         <meta name="google-site-verification" content="BH2R059J1AAkQhalQQaIBuc5hVUF0nFne34vNME-G3U" />
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/kihause-logo.png" type="image/png" sizes="192x192" />
-        <link rel="apple-touch-icon" href="/kihause-logo.png" />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/favicon-192.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
