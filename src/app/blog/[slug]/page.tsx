@@ -13,8 +13,10 @@ import PostMacMiniSetup from "@/components/blog/PostMacMiniSetup";
 import PostChatGPTKanzlei from "@/components/blog/PostChatGPTKanzlei";
 import PostLokalesKIModell from "@/components/blog/PostLokalesKIModell";
 import PostAnthropicIPO from "@/components/blog/PostAnthropicIPO";
+import PostAnthropicIPODe from "@/components/blog/PostAnthropicIPODe";
 
 const postComponents: Record<string, React.ComponentType> = {
+  "anthropic-ipo-analyse-2026": PostAnthropicIPODe,
   "anthropic-ipo-analysis-2026": PostAnthropicIPO,
   "warum-ki-in-berlin-selbst-hosten": PostSelbstHosten,
   "ki-fuer-anwaelte-und-aerzte": PostAnwaelteAerzte,

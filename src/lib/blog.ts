@@ -11,6 +11,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "anthropic-ipo-analyse-2026",
+    title: "Anthropic IPO: Der 380-Milliarden-Dollar-KI-Riese geht an die Börse — Rakete oder Rohrkrepierer?",
+    description: "Eine analytische Tiefenanalyse des möglicherweise größten Tech-Börsengangs 2026. Umsatz-Charts, Szenario-Analyse, historische Vergleiche und worauf das Smart Money achtet.",
+    date: "2026-03-31",
+    readingTime: "10 Min.",
+    category: "Analyse",
+    tags: ["Anthropic IPO", "Claude AI Börsengang", "KI Aktie 2026", "Anthropic Bewertung", "Tech IPO Analyse", "KI Investment", "OpenAI vs Anthropic"],
+    targetPackage: "b",
+  },
+  {
     slug: "anthropic-ipo-analysis-2026",
     title: "Anthropic IPO: The $380B AI Giant Goes Public — Will It Moon or Melt?",
     description: "An analytical deep-dive into what could be the biggest tech IPO of 2026. Revenue charts, scenario analysis, historical comparisons, and what smart money is watching.",
