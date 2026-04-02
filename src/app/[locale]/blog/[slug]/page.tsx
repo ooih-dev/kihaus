@@ -6,6 +6,7 @@ import StickyCTA from "@/components/blog/StickyCTA";
 import RelatedPostsSection from "@/components/blog/RelatedPostsSection";
 import { getPostBySlug, getAllSlugsWithLocales } from "@/lib/blog";
 import { createMetadata } from "@/lib/seo";
+import { marked } from "marked";
 
 import PostSelbstHosten from "@/components/blog/PostSelbstHosten";
 import PostAnwaelteAerzte from "@/components/blog/PostAnwaelteAerzte";
@@ -120,6 +121,12 @@ export default async function BlogPostPage({
   const PostContent = postComponents[slug];
   if (post.contentType === "component" && !PostContent) notFound();
 
+  // Render markdown content to HTML for markdown posts
+  let markdownHtml: string | null = null;
+  if (post.contentType === "markdown" && post.content) {
+    markdownHtml = marked.parse(post.content) as string;
+  }
+
   const labels = packageLabels[locale] || packageLabels.de;
   const isEn = locale === "en";
 
@@ -180,9 +187,16 @@ export default async function BlogPostPage({
           </div>
 
           {/* Article body */}
-          <div className="[&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:text-slate-900 [&>p]:text-lg [&>p]:text-slate-600 [&>p]:leading-relaxed [&>p]:mb-6 [&>ul]:space-y-2 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:mb-6 [&>ul>li]:text-lg [&>ul>li]:text-slate-600 [&>ul>li]:leading-relaxed [&>ol]:space-y-2 [&>ol]:ml-6 [&>ol]:list-decimal [&>ol]:mb-6 [&>ol>li]:text-lg [&>ol>li]:text-slate-600 [&>ol>li]:leading-relaxed">
-            {PostContent && <PostContent />}
-          </div>
+          {PostContent ? (
+            <div className="[&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:text-slate-900 [&>p]:text-lg [&>p]:text-slate-600 [&>p]:leading-relaxed [&>p]:mb-6 [&>ul]:space-y-2 [&>ul]:ml-6 [&>ul]:list-disc [&>ul]:mb-6 [&>ul>li]:text-lg [&>ul>li]:text-slate-600 [&>ul>li]:leading-relaxed [&>ol]:space-y-2 [&>ol]:ml-6 [&>ol]:list-decimal [&>ol]:mb-6 [&>ol>li]:text-lg [&>ol>li]:text-slate-600 [&>ol>li]:leading-relaxed">
+              <PostContent />
+            </div>
+          ) : markdownHtml ? (
+            <div
+              className="blog-content"
+              dangerouslySetInnerHTML={{ __html: markdownHtml }}
+            />
+          ) : null}
 
           {/* End-of-article CTA */}
           <div className="mt-16 rounded-2xl bg-slate-900 p-8 text-white">

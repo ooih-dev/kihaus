@@ -36,7 +36,11 @@ export default function PostKIHauseOoihInitiative() {
         KI-Beratung für Kanzleien, Praxen und Agenturen.
       </p>
 
-      <InlineCTA />
+      <InlineCTA
+        headline="Bereit für private KI?"
+        text="Erfahren Sie, wie KIHause und ooih gemeinsam die passende Lösung für Ihr Unternehmen entwickeln."
+        postTitle="KIHause × ooih: Gemeinsame Initiative für private KI in Deutschland"
+      />
 
       <h2>Warum jetzt?</h2>
 
