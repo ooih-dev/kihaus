@@ -14,6 +14,7 @@ import PostChatGPTKanzlei from "@/components/blog/PostChatGPTKanzlei";
 import PostLokalesKIModell from "@/components/blog/PostLokalesKIModell";
 import PostAnthropicIPO from "@/components/blog/PostAnthropicIPO";
 import PostAnthropicIPODe from "@/components/blog/PostAnthropicIPODe";
+import PostKIHauseOoihInitiative from "@/components/blog/PostKIHauseOoihInitiative";
 
 // ISR: revalidate every 60s so new posts appear without redeploy
 export const revalidate = 60;
@@ -29,6 +30,7 @@ const postComponents: Record<string, React.ComponentType> = {
   "mac-mini-private-ki-zentrale": PostMacMiniSetup,
   "chatgpt-datenschutz-risiko-kanzlei": PostChatGPTKanzlei,
   "was-ist-lokales-ki-modell": PostLokalesKIModell,
+  "kihause-ooih-gemeinsame-initiative": PostKIHauseOoihInitiative,
 };
 
 export async function generateStaticParams() {
